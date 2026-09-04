@@ -1,0 +1,129 @@
+---
+title: "Baby Names"
+format:
+  html:
+    theme: flatly
+    mainfont: "Outfit, sans-serif"
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(tidyverse)
+library(plotly)
+```
+
+```{r}
+#| label: load-data
+# Find all yearly text files and read them into one tibble
+files <- list.files("data", pattern = "^yob[0-9]{4}\\.txt$", full.names = TRUE)
+
+babynames <- read_csv(
+  files,
+  id = "year",
+  col_names = c("name", "sex", "n")
+) |>
+  mutate(year = parse_number(year))
+
+# Save aggregated table for fast interactive queries in the browser
+if (!file.exists("data/names.parquet")) {
+  babynames |>
+    summarise(n = sum(n), .by = c(name, year)) |>
+    arrow::write_parquet("data/names.parquet")
+}
+```
+
+::: {.column-margin}
+### Similar Names
+
+Names most similar in spelling to **Brooklynn**:
+
+```{r}
+#| label: similar-names-table
+# Calculate spelling similarity to Brooklynn using Levenshtein distance
+candidates <- c(
+  "Brooklyn", "Brooklynne", "Brooklyne", "Brookelynn", 
+  "Brooklin", "Brookelyn", "Braylynn", "Brooke", "Oaklynn"
+)
+
+tibble(
+  Name = candidates,
+  Similarity = paste0(round((1 - adist("Brooklynn", candidates)[1, ] / 10) * 100), "%")
+) |>
+  knitr::kable()
+```
+:::
+
+The rise of the spelling **Brooklynn** was largely driven by the surge of the primary spelling **Brooklyn** as a popular place-name and girl's name, especially after David and Victoria Beckham named their firstborn Brooklyn in 1999.
+
+```{r}
+#| label: plot-brooklyn-comparison
+# Compare both spellings to see the shared trend and the Beckham milestone
+p <- babynames |>
+  filter(name %in% c("Brooklyn", "Brooklynn")) |>
+  summarise(total = sum(n), .by = c(year, name)) |>
+  ggplot(aes(x = year, y = total, color = name)) +
+  geom_line(linewidth = 1) +
+  geom_vline(xintercept = 1999, linetype = "dashed", color = "gray40") +
+  annotate(
+    "text",
+    x = 1998,
+    y = 6000,
+    label = "1999: Brooklyn Beckham born",
+    hjust = 1,
+    size = 3.5,
+    family = "URW Gothic"
+  ) +
+  labs(
+    title = "Popularity of Brooklyn vs. Brooklynn Over Time",
+    x = "Year",
+    y = "Number of Babies",
+    color = "Spelling"
+  ) +
+  theme_minimal(base_family = "URW Gothic", base_size = 12)
+
+ggplotly(p)
+```
+
+## Compare Your Name
+
+Type any name into the box below to compare its popularity to Brooklynn:
+
+```{ojs}
+//| echo: false
+db = DuckDBClient.of({names: FileAttachment("data/names.parquet")})
+
+viewof your_name = Inputs.text({
+  label: "Enter a name:",
+  value: "Jessica",
+  placeholder: "Type a name..."
+})
+
+comparison_data = db.query(`
+  SELECT year, name, n 
+  FROM names 
+  WHERE LOWER(name) IN ('brooklynn', LOWER('${your_name}'))
+  ORDER BY year
+`)
+
+Plot.plot({
+  title: `Comparing ${your_name} with Brooklynn`,
+  marks: [
+    Plot.lineY(comparison_data, {x: "year", y: "n", stroke: "name", strokeWidth: 2}),
+    Plot.tip(comparison_data, Plot.pointerX({x: "year", y: "n", fill: "name"}))
+  ],
+  x: {tickFormat: "d", label: "Year"},
+  y: {label: "Number of Babies", grid: true},
+  color: {legend: true}
+})
+```
+
+
