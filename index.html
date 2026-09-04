@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -39,7 +74,21 @@ ul.task-list li input[type="checkbox"] {
 <link href="names_files/libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="names_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="names_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="names_files/libs/bootstrap/bootstrap-c19e201e7c4750a027ac7a2f6584b086.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="names_files/libs/bootstrap/bootstrap-71ae48f4744adb02060e99726a500d74.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script type="module" src="names_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="names_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<link href="names_files/libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="names_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="names_files/libs/plotly-binding-4.12.1/plotly.js"></script>
+<script src="names_files/libs/typedarray-0.1/typedarray.min.js"></script>
+<script src="names_files/libs/jquery-3.5.1/jquery.min.js"></script>
+<link href="names_files/libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
+<script src="names_files/libs/crosstalk-1.2.2/js/crosstalk.min.js"></script>
+<link href="names_files/libs/plotly-htmlwidgets-css-2.25.2/plotly-htmlwidgets.css" rel="stylesheet">
+<script src="names_files/libs/plotly-main-2.25.2/plotly-latest.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
 
 
 </head>
@@ -69,18 +118,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The rise of the spelling <strong>Brooklynn</strong> was largely driven by the surge of the primary spelling <strong>Brooklyn</strong> as a popular place-name and girl’s name, especially after David and Victoria Beckham named their firstborn Brooklyn in 1999.</p>
 <div class="cell">
 <div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-da53a67c95e4c06409e7" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-da53a67c95e4c06409e7">{"x":{"data":[{"x":[1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"y":[6,7,8,12,11,26,32,50,53,60,78,78,69,79,96,106,139,172,215,304,435,546,675,790,1027,1346,1573,1716,1864,1924,2228,2969,3342,4206,4794,4972,5418,5797,6217,7257,6859,6953,6910,6400,6039,5284,4716,4411,4093,3597,3269,2928,2562,2337],"text":["year: 1972<br />total:    6<br />name: Brooklyn","year: 1973<br />total:    7<br />name: Brooklyn","year: 1974<br />total:    8<br />name: Brooklyn","year: 1975<br />total:   12<br />name: Brooklyn","year: 1976<br />total:   11<br />name: Brooklyn","year: 1977<br />total:   26<br />name: Brooklyn","year: 1978<br />total:   32<br />name: Brooklyn","year: 1979<br />total:   50<br />name: Brooklyn","year: 1980<br />total:   53<br />name: Brooklyn","year: 1981<br />total:   60<br />name: Brooklyn","year: 1982<br />total:   78<br />name: Brooklyn","year: 1983<br />total:   78<br />name: Brooklyn","year: 1984<br />total:   69<br />name: Brooklyn","year: 1985<br />total:   79<br />name: Brooklyn","year: 1986<br />total:   96<br />name: Brooklyn","year: 1987<br />total:  106<br />name: Brooklyn","year: 1988<br />total:  139<br />name: Brooklyn","year: 1989<br />total:  172<br />name: Brooklyn","year: 1990<br />total:  215<br />name: Brooklyn","year: 1991<br />total:  304<br />name: Brooklyn","year: 1992<br />total:  435<br />name: Brooklyn","year: 1993<br />total:  546<br />name: Brooklyn","year: 1994<br />total:  675<br />name: Brooklyn","year: 1995<br />total:  790<br />name: Brooklyn","year: 1996<br />total: 1027<br />name: Brooklyn","year: 1997<br />total: 1346<br />name: Brooklyn","year: 1998<br />total: 1573<br />name: Brooklyn","year: 1999<br />total: 1716<br />name: Brooklyn","year: 2000<br />total: 1864<br />name: Brooklyn","year: 2001<br />total: 1924<br />name: Brooklyn","year: 2002<br />total: 2228<br />name: Brooklyn","year: 2003<br />total: 2969<br />name: Brooklyn","year: 2004<br />total: 3342<br />name: Brooklyn","year: 2005<br />total: 4206<br />name: Brooklyn","year: 2006<br />total: 4794<br />name: Brooklyn","year: 2007<br />total: 4972<br />name: Brooklyn","year: 2008<br />total: 5418<br />name: Brooklyn","year: 2009<br />total: 5797<br />name: Brooklyn","year: 2010<br />total: 6217<br />name: Brooklyn","year: 2011<br />total: 7257<br />name: Brooklyn","year: 2012<br />total: 6859<br />name: Brooklyn","year: 2013<br />total: 6953<br />name: Brooklyn","year: 2014<br />total: 6910<br />name: Brooklyn","year: 2015<br />total: 6400<br />name: Brooklyn","year: 2016<br />total: 6039<br />name: Brooklyn","year: 2017<br />total: 5284<br />name: Brooklyn","year: 2018<br />total: 4716<br />name: Brooklyn","year: 2019<br />total: 4411<br />name: Brooklyn","year: 2020<br />total: 4093<br />name: Brooklyn","year: 2021<br />total: 3597<br />name: Brooklyn","year: 2022<br />total: 3269<br />name: Brooklyn","year: 2023<br />total: 2928<br />name: Brooklyn","year: 2024<br />total: 2562<br />name: Brooklyn","year: 2025<br />total: 2337<br />name: Brooklyn"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(248,118,109,1)","dash":"solid"},"hoveron":"points","name":"Brooklyn","legendgroup":"Brooklyn","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1975,1976,1977,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"y":[8,5,7,16,18,14,12,7,17,16,24,23,27,47,41,81,103,170,168,209,274,384,462,495,510,515,618,748,929,1201,1443,1742,1836,1968,2191,2412,2329,2164,2065,1896,1658,1429,1426,1266,1170,1041,876,829,665,608],"text":["year: 1975<br />total:    8<br />name: Brooklynn","year: 1976<br />total:    5<br />name: Brooklynn","year: 1977<br />total:    7<br />name: Brooklynn","year: 1979<br />total:   16<br />name: Brooklynn","year: 1980<br />total:   18<br />name: Brooklynn","year: 1981<br />total:   14<br />name: Brooklynn","year: 1982<br />total:   12<br />name: Brooklynn","year: 1983<br />total:    7<br />name: Brooklynn","year: 1984<br />total:   17<br />name: Brooklynn","year: 1985<br />total:   16<br />name: Brooklynn","year: 1986<br />total:   24<br />name: Brooklynn","year: 1987<br />total:   23<br />name: Brooklynn","year: 1988<br />total:   27<br />name: Brooklynn","year: 1989<br />total:   47<br />name: Brooklynn","year: 1990<br />total:   41<br />name: Brooklynn","year: 1991<br />total:   81<br />name: Brooklynn","year: 1992<br />total:  103<br />name: Brooklynn","year: 1993<br />total:  170<br />name: Brooklynn","year: 1994<br />total:  168<br />name: Brooklynn","year: 1995<br />total:  209<br />name: Brooklynn","year: 1996<br />total:  274<br />name: Brooklynn","year: 1997<br />total:  384<br />name: Brooklynn","year: 1998<br />total:  462<br />name: Brooklynn","year: 1999<br />total:  495<br />name: Brooklynn","year: 2000<br />total:  510<br />name: Brooklynn","year: 2001<br />total:  515<br />name: Brooklynn","year: 2002<br />total:  618<br />name: Brooklynn","year: 2003<br />total:  748<br />name: Brooklynn","year: 2004<br />total:  929<br />name: Brooklynn","year: 2005<br />total: 1201<br />name: Brooklynn","year: 2006<br />total: 1443<br />name: Brooklynn","year: 2007<br />total: 1742<br />name: Brooklynn","year: 2008<br />total: 1836<br />name: Brooklynn","year: 2009<br />total: 1968<br />name: Brooklynn","year: 2010<br />total: 2191<br />name: Brooklynn","year: 2011<br />total: 2412<br />name: Brooklynn","year: 2012<br />total: 2329<br />name: Brooklynn","year: 2013<br />total: 2164<br />name: Brooklynn","year: 2014<br />total: 2065<br />name: Brooklynn","year: 2015<br />total: 1896<br />name: Brooklynn","year: 2016<br />total: 1658<br />name: Brooklynn","year: 2017<br />total: 1429<br />name: Brooklynn","year: 2018<br />total: 1426<br />name: Brooklynn","year: 2019<br />total: 1266<br />name: Brooklynn","year: 2020<br />total: 1170<br />name: Brooklynn","year: 2021<br />total: 1041<br />name: Brooklynn","year: 2022<br />total:  876<br />name: Brooklynn","year: 2023<br />total:  829<br />name: Brooklynn","year: 2024<br />total:  665<br />name: Brooklynn","year: 2025<br />total:  608<br />name: Brooklynn"],"type":"scatter","mode":"lines","line":{"width":3.7795275590551185,"color":"rgba(0,191,196,1)","dash":"solid"},"hoveron":"points","name":"Brooklynn","legendgroup":"Brooklynn","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1999,1999],"y":[-357.60000000000002,7619.6000000000004],"text":"xintercept: 1999","type":"scatter","mode":"lines","line":{"width":1.8897637795275593,"color":"rgba(102,102,102,1)","dash":"dash"},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1998],"y":[6000],"text":"1999: Brooklyn Beckham born","hovertext":"x: 1998<br />y: 6000","textfont":{"size":13.228346456692915,"color":"rgba(0,0,0,1)"},"type":"scatter","mode":"text","hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":43.098381070983812,"r":7.9701120797011216,"b":40.647571606475722,"l":53.399750933997524},"paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"URW Gothic","size":15.940224159402243},"title":{"text":"Popularity of Brooklyn vs. Brooklynn Over Time","font":{"color":"rgba(0,0,0,1)","family":"URW Gothic","size":19.128268991282692},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1969.3499999999999,2027.6500000000001],"tickmode":"array","ticktext":["1970","1980","1990","2000","2010","2020"],"tickvals":[1970,1980,1990,2000,2010,2020],"categoryorder":"array","categoryarray":["1970","1980","1990","2000","2010","2020"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505608,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URW Gothic","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.72455564360919278,"zeroline":false,"anchor":"y","title":{"text":"Year","font":{"color":"rgba(0,0,0,1)","family":"URW Gothic","size":15.940224159402243}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-357.60000000000002,7619.6000000000004],"tickmode":"array","ticktext":["0","2000","4000","6000"],"tickvals":[0,2000,4000.0000000000005,6000],"categoryorder":"array","categoryarray":["0","2000","4000","6000"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.9850560398505608,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"URW Gothic","size":12.7521793275218},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.72455564360919278,"zeroline":false,"anchor":"x","title":{"text":"Number of Babies","font":{"color":"rgba(0,0,0,1)","family":"URW Gothic","size":15.940224159402243}},"hoverformat":".2f"},"shapes":[],"showlegend":true,"legend":{"bgcolor":null,"bordercolor":null,"borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"URW Gothic","size":12.7521793275218},"title":{"text":"Spelling","font":{"color":"rgba(0,0,0,1)","family":"URW Gothic","size":15.940224159402243}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"5feb718a84af":{"x":{},"y":{},"colour":{},"type":"scatter"},"5feb4e7726c2":{"xintercept":{}},"5febb772067":{"x":{},"y":{}}},"cur_data":"5feb718a84af","visdat":{"5feb718a84af":["function (y) ","x"],"5feb4e7726c2":["function (y) ","x"],"5febb772067":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<section id="compare-your-name" class="level2">
+<h2 class="anchored" data-anchor-id="compare-your-name">Compare Your Name</h2>
+<p>Type any name into the box below to compare its popularity to Brooklynn:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="81" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 80;"><span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> DuckDBClient<span class="op">.</span><span class="fu">of</span>({<span class="dt">names</span><span class="op">:</span> <span class="fu">FileAttachment</span>(<span class="st">"data/names.parquet"</span>)})</span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>viewof your_name <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">text</span>({</span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Enter a name:"</span><span class="op">,</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"Jessica"</span><span class="op">,</span></span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>  <span class="dt">placeholder</span><span class="op">:</span> <span class="st">"Type a name..."</span></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>comparison_data <span class="op">=</span> db<span class="op">.</span><span class="fu">query</span>(<span class="vs">`</span></span>
+<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a><span class="vs">  SELECT year, name, n </span></span>
+<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="vs">  FROM names </span></span>
+<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="vs">  WHERE LOWER(name) IN ('brooklynn', LOWER('</span><span class="sc">${</span>your_name<span class="sc">}</span><span class="vs">'))</span></span>
+<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="vs">  ORDER BY year</span></span>
+<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="vs">`</span>)</span>
+<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="vs">`Comparing </span><span class="sc">${</span>your_name<span class="sc">}</span><span class="vs"> with Brooklynn`</span><span class="op">,</span></span>
+<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">lineY</span>(comparison_data<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"n"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"name"</span><span class="op">,</span> <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">2</span>})<span class="op">,</span></span>
+<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">tip</span>(comparison_data<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointerX</span>({<span class="dt">x</span><span class="op">:</span> <span class="st">"year"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"n"</span><span class="op">,</span> <span class="dt">fill</span><span class="op">:</span> <span class="st">"name"</span>}))</span>
+<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {<span class="dt">tickFormat</span><span class="op">:</span> <span class="st">"d"</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Year"</span>}<span class="op">,</span></span>
+<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {<span class="dt">label</span><span class="op">:</span> <span class="st">"Number of Babies"</span><span class="op">,</span> <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span>}<span class="op">,</span></span>
+<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {<span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span>}</span>
+<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
 <div>
-<figure class="figure">
-<p><img src="names_files/figure-html/plot-brooklynn-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
 </div>
 </div>
 </div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
 
 </main>
 <!-- /main column -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImRiID0gRHVja0RCQ2xpZW50Lm9mKHtuYW1lczogRmlsZUF0dGFjaG1lbnQoXCJkYXRhL25hbWVzLnBhcnF1ZXRcIil9KVxuXG52aWV3b2YgeW91cl9uYW1lID0gSW5wdXRzLnRleHQoe1xuICBsYWJlbDogXCJFbnRlciBhIG5hbWU6XCIsXG4gIHZhbHVlOiBcIkplc3NpY2FcIixcbiAgcGxhY2Vob2xkZXI6IFwiVHlwZSBhIG5hbWUuLi5cIlxufSlcblxuY29tcGFyaXNvbl9kYXRhID0gZGIucXVlcnkoYFxuICBTRUxFQ1QgeWVhciwgbmFtZSwgbiBcbiAgRlJPTSBuYW1lcyBcbiAgV0hFUkUgTE9XRVIobmFtZSkgSU4gKCdicm9va2x5bm4nLCBMT1dFUignJHt5b3VyX25hbWV9JykpXG4gIE9SREVSIEJZIHllYXJcbmApXG5cblBsb3QucGxvdCh7XG4gIHRpdGxlOiBgQ29tcGFyaW5nICR7eW91cl9uYW1lfSB3aXRoIEJyb29rbHlubmAsXG4gIG1hcmtzOiBbXG4gICAgUGxvdC5saW5lWShjb21wYXJpc29uX2RhdGEsIHt4OiBcInllYXJcIiwgeTogXCJuXCIsIHN0cm9rZTogXCJuYW1lXCIsIHN0cm9rZVdpZHRoOiAyfSksXG4gICAgUGxvdC50aXAoY29tcGFyaXNvbl9kYXRhLCBQbG90LnBvaW50ZXJYKHt4OiBcInllYXJcIiwgeTogXCJuXCIsIGZpbGw6IFwibmFtZVwifSkpXG4gIF0sXG4gIHg6IHt0aWNrRm9ybWF0OiBcImRcIiwgbGFiZWw6IFwiWWVhclwifSxcbiAgeToge2xhYmVsOiBcIk51bWJlciBvZiBCYWJpZXNcIiwgZ3JpZDogdHJ1ZX0sXG4gIGNvbG9yOiB7bGVnZW5kOiB0cnVlfVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgneW91cl9uYW1lJykifV19
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../..";
+window._ojs.paths.runtimeToRoot = "../../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
